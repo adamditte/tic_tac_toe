@@ -5,18 +5,18 @@ require_relative 'human.rb'
 require_relative 'console_random_ai.rb'
 require_relative 'console_sequential_ai.rb'
 require_relative 'unbeatable_ai.rb'
-require_relative 'negamax.rb'
-require_relative 'players.rb'
+# require_relative 'negamax.rb'
+# require_relative 'players.rb'
 
 enable :sessions
 play_board = Board.new(["","","","","","","","",""])
-players = Gameplayers.new()
+# players = Gameplayers.new()
 
 ai = ""
 
 get '/' do
     session[:board] = Board.new(["","","","","","","","",""])
-	session[:players] = Gameplayers.new()
+	# session[:players] = Gameplayers.new()
     erb :home, :layout => :home_layout, :locals => { :board => session[:board].board_positions }
 end
 
@@ -136,4 +136,5 @@ get '/change_player' do
 		end
 		redirect '/get_move'
 		# erb :get_move, :locals => { :current_player => session[:current_player], :current_player_name => session[:current_player_name], :board => session[:board].board_positions }
-
+	
+end
