@@ -8,9 +8,9 @@ require_relative 'unbeatable_ai.rb'
 
 
 enable :sessions
-play_board = Board.new(["","","","","","","","",""])
+# play_board = Board.new(["","","","","","","","",""])
 
-ai = ""
+# ai = ""
 
 get '/' do
     session[:board] = Board.new(["","","","","","","","",""])
